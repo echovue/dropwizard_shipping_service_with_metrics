@@ -1,0 +1,28 @@
+group 'com.echovue'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'gradle-one-jar'
+
+sourceCompatibility = 1.8
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.github.rholder:gradle-one-jar:1.0.4'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile('io.dropwizard:dropwizard-core:1.1.0')
+}
+
+task packageJar(type: OneJar) {
+    mainClass = 'com.echovue.shippingservice.ShippingServiceApplication'
+}
