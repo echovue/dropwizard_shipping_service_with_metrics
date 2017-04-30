@@ -2,6 +2,16 @@ server:
   applicationConnectors:
     - type: http
       port: 8080
+
+metrics:
+  frequency: 1 minute
+  reporters:
+    - type: netuitive-rest
+      apiKey: ***CustomIntegrationAPIKeyHere***
+      elementName: ShippingService
+      apiHost: api.app.netuitive.com
+      elementType: Dropwizard
+
 # Logging settings.
 logging:
   level: INFO

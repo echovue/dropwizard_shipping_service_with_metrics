@@ -15,12 +15,23 @@ buildscript {
     }
 }
 
+project.ext {
+    dropwizardVersion = '1.1.0'
+    anankeVersion = '0.1.25'
+}
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    compile('io.dropwizard:dropwizard-core:1.1.0')
+    compile (
+            "io.dropwizard:dropwizard-core:${dropwizardVersion}"
+    )
+    runtime (
+            "com.netuitive:dropwizard-metrics-netuitive:+",
+            "com.netuitive:ananke:${anankeVersion}"
+    )
 }
 
 task packageJar(type: OneJar) {
