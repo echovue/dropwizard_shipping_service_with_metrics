@@ -1,8 +1,7 @@
 DropWizard Example
 ======
 
-Shipping Calculation Service using Netuitive Metrics
----
+##Shipping Calculation Service using Netuitive Metrics
 
 Down load the repository and update the API Key in shippingservice.yaml with your Custom Integration API Key from Netuitive.
 
